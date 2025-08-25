@@ -1,0 +1,492 @@
+/* Base */
+/* Universal Selector - Applies to all elements. Used for box model resets and consistent font styling. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Box Model */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Tag Selector for body element. Also demonstrates background and text color usage. */
+body {
+  background-color: #f8f9fa; /* Background Property */
+  color: #333;
+}
+
+/* Class Selector to center content and control width/padding (Box Model) */
+.container {
+  max-width: 1100px;
+  margin: 0 auto; /* Box Model */
+  padding: 0 20px; /* Box Model */
+}
+
+/* Header */
+/* ID Selector used to style header section with sticky positioning */
+#mainHeader {
+  background-color: white; /* Background Property */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Visual depth */
+  padding: 15px 0; /* Box Model */
+  position: sticky; /* Positioning */
+  top: 0;
+  z-index: 10;
+}
+
+/* Flexbox layout for horizontal alignment */
+.header-content {
+  display: flex; /* Flexbox */
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Descendant Selector, styling navigation links */
+.nav-links .nav-item {
+  margin-left: 20px; /* Box Model */
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* Pseudo-class selector for hover state */
+.nav-links .nav-item:hover {
+  color: #d32f2f;
+}
+
+/* Hero Banner */
+/* Class Selector - background gradient and padding (Box Model + Background) */
+.hero-banner {
+  text-align: center;
+  background: linear-gradient(to right, #ffebee, #ffffff); /* Background Property */
+  padding: 60px 20px; /* Box Model */
+  border-radius: 10px; /* Box Model */
+}
+
+.hero-banner h1 {
+  font-size: 36px;
+  margin-bottom: 15px; /* Box Model */
+  color: #b71c1c;
+}
+
+.hero-banner p {
+  font-size: 18px;
+  margin-bottom: 25px; /* Box Model */
+}
+
+.cta-btn {
+  padding: 12px 25px; /* Box Model */
+  background-color: #d32f2f; /* Background Property */
+  color: white;
+  border: none;
+  border-radius: 6px; /* Box Model */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.cta-btn:hover {
+  background-color: #5fb71c; /* Background Property */
+}
+
+/* Sections */
+.section {
+  margin: 40px 0; /* Box Model */
+  background-color: #fff;
+  padding: 25px; /* Box Model */
+  border-radius: 10px; /* Box Model */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Visual Depth */
+}
+
+.section-heading {
+  margin-bottom: 20px;
+  color: #d32f2f;
+  position: relative; /* Positioning */
+}
+
+/* === Transitions and Transforms === */
+
+/* Route Card: Zoom on hover using transform and transition */
+.route-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out; /* transition used */
+}
+
+.route-card:hover {
+  transform: scale(1.03); /* transform used */
+}
+
+/* Feature Box: lift up slightly on hover */
+.feature-box {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease; /* transition used */
+}
+
+.feature-box:hover {
+  transform: translateY(-5px); /* lift on hover */
+}
+
+/* Call-to-action button hover effect */
+.cta-btn {
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s, transform 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #b71c1c;
+  transform: scale(1.05); /* slight zoom */
+}
+
+/* === Bus Cards with Images === */
+
+.bus-cards-section {
+  padding: 2rem;
+  background-color: #f1f1f1;
+}
+
+.bus-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.bus-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.bus-card:hover {
+  transform: scale(1.05); /* transform used */
+}
+
+.bus-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.bus-card-content {
+  padding: 1rem;
+}
+
+.bus-card-content h4 {
+  margin: 0 0 0.5rem;
+}
+
+.bus-card-content p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* Pseudo-element to add decorative arrow after heading */
+.section-heading::after {
+  content: "\2192";
+  margin-left: 8px;
+  color: #999;
+}
+
+/* Form */
+/* Flexbox used for layout of input fields and button */
+#searchForm {
+  display: flex; /* Flexbox */
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.input-field {
+  padding: 10px; /* Box Model */
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Box Model */
+  border-radius: 6px; /* Box Model */
+  width: 200px;
+}
+
+.input-field:focus {
+  border-color: #1976d2; /* Pseudo-class */
+  outline: none;
+}
+
+/* ID Selector - search button styling */
+#searchBtn {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px; /* Box Model */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#searchBtn:hover {
+  background-color: #0d47a1; /* Pseudo-class */
+}
+
+/* Offers */
+/* Flexbox layout to arrange offers side by side */
+.offerContainer {
+  display: flex; /* Flexbox */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.offer-card {
+  flex: 1 1 200px; /* Flex Grow, Shrink, Basis */
+  background-color: #fff0f0;
+  border-left: 5px solid #d32f2f; /* Box Model */
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px; /* Box Model */
+  transition: transform 0.3s;
+}
+
+.offer-card:hover {
+  transform: scale(1.02); /* Pseudo-class for interaction */
+}
+
+/* Pseudo-class selector to style first card differently */
+.offer-card:first-child {
+  background-color: #ffe0e0;
+}
+
+/* Pseudo-element to insert symbol before heading */
+.offer-card h3::before {
+  content: "\1F4B8 ";
+}
+
+/* Filters */
+.filter-panel label {
+  margin-right: 20px; /* Box Model */
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Bus Cards */
+/* Flex container for listing bus cards horizontally if needed */
+.bus-list{
+  display: flex; /* Flexbox */
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bus-card {
+  border: 1px solid #ccc;
+  padding: 15px; /* Box Model */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s;
+  width: 220px;
+}
+
+.bus-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Child selector used here */
+.bus-card > h3 {
+  color: #d32f2f;
+}
+
+.bus-card p {
+  margin: 5px 0; /* Box Model */
+}
+
+/* Pseudo-element to style first letter */
+.bus-name::first-letter {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.book-btn {
+  background-color: #43a047;
+  color: white;
+  padding: 8px 12px; /* Box Model */
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #2e7d32;
+}
+
+/* Pseudo-class for nth-child selector */
+.bus-card:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Combinators */
+.info + .info {
+  background-color: #fff3cd;
+  padding: 10px;
+  border-left: 4px solid #ffa000;
+  margin-top: 10px;
+}
+
+.fare-section .fare ~ p {
+  color: #00796b;
+  font-weight: bold;
+}
+
+/* ============================
+   Popular Routes Section
+   ============================ */
+.routeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.route-card {
+  background-color: #e3f2fd;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 30%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.route-card:hover {
+  transform: translateY(-5px);
+}
+
+.route-card h3 {
+  color: #1976d2;
+  margin-bottom: 10px;
+}
+
+/* ============================
+   Download App Section
+   ============================ */
+.download-app {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.download-app img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-app-content {
+  flex: 1;
+}
+
+.download-app-content p {
+  margin: 10px 0 15px;
+}
+
+/* ============================
+   Features Section
+   ============================ */
+.featuresContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  flex: 1 1 30%;
+  background-color: #f1f8e9;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-box i {
+  font-size: 30px;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Testimonials */
+.testimonials .testimonial {
+  background-color: #f3f4f6;
+  padding: 20px;
+  border-left: 4px solid #1976d2;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.testimonials .testimonial span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Newsletter */
+/* Flexbox to arrange input and button in same line */
+.newsletter-form {
+  display: flex; /* Flexbox */
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.subscribe-btn {
+  background-color: #d32f2f;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+  background-color: #c62828;
+}
+
+/* Footer */
+.footer {
+  background-color: #ececec;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Pseudo-element for text selection */
+.footer p::selection {
+  background-color: #1976d2;
+  color: white;
+}
