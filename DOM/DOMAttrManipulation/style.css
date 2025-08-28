@@ -1,0 +1,26 @@
+.profilePicture {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 15px;
+}
+
+a {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #0077cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+a:hover {
+  background: #005fa3;
+}
+
+.highlight {
+  border: 4px solid gold;
+}
