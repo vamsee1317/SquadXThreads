@@ -2,10 +2,11 @@
 
 
 // To-do-list : (CRUD operations)
-// FormValidations
+
 // Dynamic Navbar
 // Profile Card Generators
 // Image Gallery With LightBox
+// FormValidations - (forms concept)
 
 
 // Events : Events are nothing but actions or occurences that happen in the browser, often triggered by the user or the browser itself and can be handled with Js code.
@@ -55,3 +56,27 @@ addBtn.addEventListener("click", () => {
 
   taskInput.value = "";
 });
+
+
+
+
+// Dynamic Navbar code starts here
+
+const navbar = document.getElementById("navbar");
+const links = ["Home", "About", "Services", "Blog", "Reviews", "Contact"];
+
+links.push("offers", "coupouns");
+
+
+links.forEach((item)=>{
+  const a = document.createElement("a");
+  a.textContent = item;
+  console.log(a);
+
+  a.setAttribute("href", "#" + item.toLowerCase());
+  a.className =
+    "text-gray-700 font-medium px-3 py-2 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300";
+  navbar.appendChild(a);
+});
+
+

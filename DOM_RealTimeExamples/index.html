@@ -8,10 +8,14 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+<body class="bg-gray-100 min-h-screen flex flex-col items-center pt-20 p-6">
+
+  <!-- Dynamic Navbar starts here -->
+  <nav id="navbar" class="w-full bg-white shadow-md fixed top-0 left-0 flex justify-center gap-6 py-4 z-50"></nav>
+  <!-- Dynamic Navbar ends here -->
 
   <!-- Todo List Container -->
-  <div class="bg-white shadow-lg rounded-2xl w-full max-w-md p-6">
+  <div class="bg-white shadow-lg rounded-2xl w-full max-w-md p-6 mt-6">
     <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">📌 To-Do List</h2>
     <hr class="mb-4">
 
