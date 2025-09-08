@@ -1,0 +1,28 @@
+#grandParent{
+    margin: 80px auto;
+    height: 500px;
+    width: 500px;
+    background-color: grey;
+    position: relative;
+}
+
+#parent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 350px;
+    width: 350px;
+    background-color: coral;
+}
+
+#child{
+        position: absolute;
+        top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 200px;
+    margin: 50px auto;
+    background-color: teal;
+}

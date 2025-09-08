@@ -105,4 +105,7 @@ signInBtn.addEventListener("click",  function() {
       alert("Form submitted successfully!");
       return true;
     }
-)
+);
+
+
+// Event Bubbling & Capturing : 
